@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Wiki</title>
+    <style>
+        html, body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white;
+            line-height: 1.6;
+            height: 100%; /* 全体の高さを100%に設定 */
+            overflow: auto; /* スクロールを有効にする */
+            display: flex; /* Flexboxを使って中央寄せ */
+            justify-content: center; /* 横方向の中央寄せ */
+            align-items: flex-start; /* 縦方向を開始位置に寄せる */
+        }
+        .button {
+    position: absolute; /* 位置を絶対指定 */
+    top: 20px; /* 上からの距離 */
+    right: 20px; /* 右からの距離 */
+    background-color: #000000; /* ボタンの背景色 */
+    color: white; /* テキストの色 */
+    border: none; /* ボーダーなし */
+    padding: 10px 20px; /* 内部の余白 */
+    border-radius: 5px; /* 角を丸くする */
+    text-align: center; /* テキストを中央寄せ */
+    text-decoration: none; /* 下線なし */
+    font-size: 16px; /* フォントサイズ */
+    font-weight: bold; /* フォントの太さ */
+}
+
+.button:hover {
+    background-color: #000000; /* ホバー時の背景色 */
+}
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            width: 100%;
+            box-sizing: border-box; /* 内部のパディングとボーダーを含めて幅を計算 */
+            margin-top: 20px; /* 上部に余白を追加 */
+        }
+
+        h1, h2, h3 {
+            color: #fff;
+        }
+
+        .sidebar {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 10px;
+            margin-right: 20px;
+            box-sizing: border-box; /* 内部のパディングとボーダーを含めて幅を計算 */
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        .sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            color: #333;
+            box-sizing: border-box; /* 内部のパディングとボーダーを含めて幅を計算 */
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .warning {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://yuuseibe.github.io/opreport/out.html" target="_blank" class="button">公式サイト</a> <!-- ボタンの追加 -->
+    <div class="container">
+        <h1>BotのWikiへようこそ</h1>
+        <div class="sidebar">
+            <h2>Operating Botはあなたのサーバーに適していますか？</h2>
+            <h2>OperatingBotはサーバーにとって便利なボットです:</h2>
+            <ul>
+                <li>サーバーはアクティブであり、自動モデレーションが必要です</li>
+                <li>モデレーターにもっと権限を与えたい</li>
+                <li>長期的な罰則管理システムが必要です</li>
+            </ul>
+            <h2>OperatingBotはおそらくサーバーに適していません:</h2>
+            <ul>
+                <li>OperatingBotの使い方をまだ知らない</li>
+                <li>このウィキを読んでほとんどの問題を解決する能力も意欲もない</li>
+                <li>モデレーターを完全に信頼していない</li>
+                <li>あなたやあなたのモデレーターは日本語を十分に理解していない</li>
+            </ul>
+            <p>上記のいずれかに当てはまる場合、OperatingBotはおそらくサーバーにとって最適なボットではないため、<a href="https://discord.bots.gg" target="_blank">こちら</a>で別のモデレーションボットを探すことを検討する必要があります。</p>
+        </div>
+
+        <div class="content">
+            <h1>要件</h1>
+            <p>OperatingBot を使用するには、いくつかの簡単な要件があります。これらの要件は、リソースを節約するために設けられています。サーバーは以下の要件をすべて満たしている必要があります。そうでない場合、OperatingBot は自動的にサーバーを離れます。</p>
+            
+            <ul>
+                <li>30 人以上のメンバー - OperatingBot はモデレーション ボットです。メンバーが 30 人未満の場合は、なぜモデレートするためにボットが必要なのでしょうか？</li>
+                <li>ボットよりも人間の方が多い - サーバーに大量のボットを追加するとリソースが無駄になるだけであり、「ボット コレクション」サーバーを作成することは一般的に好ましくありません。どのサーバーも人間よりも多くのボットを必要とするべきではありません。</li>
+                <li>Discord と Discord ボットに関する深い知識と、ドキュメントを読む能力 - OperatingBot は管理者とモデレーターにとって使いやすいものですが、ドキュメント (この wiki) を読む時間がある場合に限ります。通常、ここで回答されている質問に対するサポートを求めると、この wiki にリダイレクトされます。</li>
+                <li>Discord の利用規約に従ってください - 自動的には検出されませんが、サーバーが ToS 違反であると報告された場合、OperatingBot は手動で削除される可能性があります。</li>
+            </ul>
+            
+            <p class="warning">⚠これらの要件を必ずお読みください。要件を満たしていない場合、OperatingBot は自動的にサーバーを離れる可能性があります。</p>
+
+            <h1>サーバーに OperatingBot を追加する</h1>
+            <p>最初のステップは、OperatingBot が実際にサーバー上にあることを確認することです。ボットをサーバーに追加するには、サーバー上でサーバー管理権限を持っている必要があります。権限を持っている場合は、以下のリンクをクリックして OperatingBot をサーバーに追加できます。</p>
+            
+            <p class="warning">⚠このセクションの上の要件をお読みください。要件を満たしていない場合、OperatingBotは自動的にサーバーを離れる場合があります。</p>
+            
+            <p>OperatingBot をサーバーに追加するには、以下のリンクをクリックしてください:</p>
+            <p><a href="https://discord.com/oauth2/authorize?client_id=1247869959569145946&permissions=1759218604441591&response_type=code&redirect_uri=https%3A%2F%2Fyuuseibe.github.io%2Fopreport%2Fout.html%23home&integration_type=0&scope=bot+email" target="_blank">OperatingBot を追加する</a></p>
+            
+            <p>サーバーがリストにない場合は、<a href="https://discordapp.com/login" target="_blank">Discord にログイン</a>して正しくログインしていることを確認してください。</p>
+            <h1>OperatingBotの権限確認</h1>
+            <p>OperatingBot が正しく動作するには、必要なタスクを完了するための適切な権限が必要です。これを実現する最も簡単な方法は、「OperatingBot」ロールに管理者権限を与え、ロール リストの一番上 (または一番上近く) にドラッグすることです。</p>
+            
+            <h2>手順:</h2>
+            <ol>
+                <li>Discord サーバーの設定に移動します。</li>
+                <li>「ロール」セクションを開きます。</li>
+                <li>「OperatingBot」ロールを見つけます。</li>
+                <li>「OperatingBot」ロールに「管理者」権限を与えます。</li>
+                <li>ロール リストの一番上 (または一番上近く) にドラッグして、他のロールより優先度を高くします。</li>
+            </ol>
+
+            <p>OperatingBotを入れる前に<a href="https://yuuseibe.github.io/endula/eula.html#" target="_blank">利用規約</a>を確認してください</p>
+
+            <h1>ユーザーミュート</h1>
+            <p>ユーザーが連続で、メッセージを送信した場合、自動的にタイムアウトされます</p>
+
+        </div>
+    </div>
+</body>
+</html>
